@@ -68,12 +68,12 @@ gulp.task('demo', function() {
         .pipe(gulp.dest('./'))
         .pipe(browserSync.reload({stream: true}))
         .pipe( $.livereload( server ) );
-    var mocksDemo = gulp.src('demo/mocks/*.json')
+    var assetsDemo = gulp.src('demo/assets/*.*')
         .pipe($.plumber())
-        .pipe(gulp.dest('./mocks'))
+        .pipe(gulp.dest('./assets'))
         .pipe(browserSync.reload({stream: true}))
         .pipe( $.livereload( server ) );
-    return merge(jadeDemo, sassDemo, coffeeDemo, mocksDemo)
+    return merge(jadeDemo, sassDemo, coffeeDemo, assetsDemo)
 
 });
 

@@ -1,6 +1,24 @@
 doctype html
-html
+html(ng-app="app")
     include ./includes/head
-    body
-        h1 Ready
+    body(ng-controller="PlayerController")
+        h1 dmk-playmusic
+        h3 Basic example
+        div(dmk-playmusic
+            url="{{music}}"
+            wave-color="#337ab7"
+            progress-color="#23527c"
+            height="64")
+        button(ng-click="dmkPlaymusic.playPause()")
+            span Play/Paused
+
+        pre.
+            div(dmk-playmusic
+                url="{ {music} }"
+                wave-color="#337ab7"
+                progress-color="#23527c"
+                height="64")
+            button(ng-click="dmkPlaymusic.playPause()")
+                span Play/Paused
+
         include ./includes/scripts
