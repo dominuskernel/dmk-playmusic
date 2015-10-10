@@ -7,7 +7,6 @@ do ->
       link: (scope, element, attrs) ->
         options = angular.extend({container:element[0]}, attrs)
         dmkPlaymusic = WaveSurfer.create(options)
-        console.log(dmkPlaymusic)
         if attrs.url
           dmkPlaymusic.load(attrs.url, attrs.data || null)
 

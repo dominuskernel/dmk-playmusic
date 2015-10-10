@@ -1,6 +1,6 @@
 {
-  "name": "components-generator",
-  "version": "0.0.0",
+  "name": "dmk-playmusic",
+  "version": "0.1.0",
   "dependencies": {
     "angular": "^1.4",
     "wavesurfer.js": "^1.0"
